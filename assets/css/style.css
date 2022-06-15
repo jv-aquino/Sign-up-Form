@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap');
+
+:root {
+  --logo-width: calc(200vh / 3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+.logo-section {
+  background: url(../img/background.jpg);
+  background-size: cover;
+  width: min(var(--logo-width), 46vw);
+  height: 100vh;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+.logo-section div {
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  padding: 33px 0;
+  gap: 0;
+
+  color: rgb(8, 8, 31);
+  background-color: rgba(18, 8, 54, 0.356);
+}
+.logo-section h1 {
+  /* Different font for the logo */
+  font-family: 'Fascinate Inline', cursive;
+  align-self: center;
+  font-size: 3.6rem;
+  margin: 0;
+}
+
+.form-section {
+  position: relative;
+  /*
+    The form's width is equal to the viewport - the logo-section width, so the form is always taking up the space left.
+
+    The left "margin" of the form is equal to the logo-section width, so they are always parallel.
+  */
+  width: calc(100vw - min(var(--logo-width), 46vw));
+  left: min(var(--logo-width), 46vw);
+}

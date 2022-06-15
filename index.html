@@ -4,11 +4,65 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="./assets/css/normalize.css">
   <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Import logo icon -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <style>
+  .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48;
+  }
+  </style>
+
   <title>Sign-up</title>
 </head>
 <body>
-  
+  <section class="logo-section">
+    <div>
+      <span class="material-symbols-outlined" style="
+      font-size: 3.9rem;">
+        token
+        </span>
+      <h1>Vhyst</h1>
+    </div>
+  </section>
+
+  <section class="form-section">
+    <h2></h2>
+    <form action="#" method="post">
+      <fieldset>
+        <caption></caption>
+        <div>
+          <label for="first-name">First Name</label>
+          <input type="text" name="first-name" id="first-name">
+        </div>
+        <div>
+          <label for="last-name">Last Name</label>
+          <input type="text" name="last-name" id="last-name">
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email">
+        </div>
+        <div>
+          <label for="phone">Phone Number</label>
+          <input type="text" name="phone" id="phone" minlength="9" max="11"></div>
+        <div>
+          <label for="password">Password</label>
+          <input name="password" id="password" type="text">
+        </div>
+        <div>
+          <label for="confirm-password">Confirm Password</label>
+          <input name="confirm-password" id="confirm-password" type="text">
+        </div>
+      </fieldset>
+    </form>
+  </section>
 </body>
 </html>
