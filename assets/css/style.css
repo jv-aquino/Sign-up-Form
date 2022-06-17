@@ -3,6 +3,7 @@
 
 :root {
   --logo-width: calc(200vh / 3);
+  --custom-white: rgb(250, 249, 255);
 }
 
 * {
@@ -15,6 +16,7 @@
 body {
   max-width: 100vw;
   max-height: 100vh;
+  background-color: var(--custom-white);
 }
 
 .logo-section {
@@ -48,6 +50,7 @@ body {
 }
 
 .form-section {
+  box-sizing: border-box;
   position: relative;
   /*
     The form's width is equal to the viewport - the logo-section width, so the form is always taking up the space left.
@@ -56,4 +59,25 @@ body {
   */
   width: calc(100vw - min(var(--logo-width), 46vw));
   left: min(var(--logo-width), 46vw);
+}
+.form-section h2 {
+  padding: 20px 10px 10px;
+}
+.form-section form {
+  padding-top: 10px;
+}
+.form-section form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section input {
+  border: 1.5px rgba(18, 8, 54, 0.356) solid;
+  border-radius: 4px;
+}
+.form-section input:focus:valid {
+  border-bottom-color:  green;
+}
+.form-section input:focus:invalid {
+  border-bottom-color:  rgb(255, 0, 0);
 }
