@@ -61,7 +61,8 @@ body {
   left: min(var(--logo-width), 46vw);
 }
 .form-section h2 {
-  padding: 20px 10px 10px;
+  color: rgb(17, 4, 20);
+  padding: 15px 10px 18px;
 }
 .form-section form {
   padding-top: 10px;
@@ -71,13 +72,49 @@ body {
   flex-direction: column;
 }
 
+.form-section fieldset {
+  border-left: none;
+  border-right: none;
+  border-radius: 1px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .form-section input {
-  border: 1.5px rgba(18, 8, 54, 0.356) solid;
-  border-radius: 4px;
+  border: none;
+  border-bottom: 1.5px rgba(18, 8, 54, 0.356) solid;
+
+  padding: 2px;
+  padding-left: 3px;
 }
 .form-section input:focus:valid {
   border-bottom-color:  green;
 }
 .form-section input:focus:invalid {
   border-bottom-color:  rgb(255, 0, 0);
+}
+
+.form-section button {
+  display: block;
+  margin: auto;
+  margin-top: 15px;
+
+  font-size: 1.65rem;
+  padding: 9px 4px;
+  background-color: #290836;
+  color: #af85c0;
+  border-radius: 6px;
+  border: none;
+
+  cursor: pointer;
+  transition: .5s;
+}
+
+.form-section button:hover {
+  color: #290836;
+  background-color: #af85c0;
+  transform: scale(1.1);
+  font-size: 1.7rem;
 }
