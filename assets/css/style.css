@@ -2,8 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap');
 
 :root {
+  /* Width keeps the img resolution */
   --logo-width: calc(200vh / 3);
   --custom-white: rgb(250, 249, 255);
+}
+
+::selection {
+  color: var(--custom-white);
+  background-color: #290836;
 }
 
 * {
@@ -49,6 +55,7 @@ body {
   margin: 0;
 }
 
+
 .form-section {
   box-sizing: border-box;
   position: relative;
@@ -61,39 +68,54 @@ body {
   left: min(var(--logo-width), 46vw);
 }
 .form-section h2 {
-  color: rgb(17, 4, 20);
+  color: rgb(25, 5, 29);
   padding: 15px 10px 18px;
 }
 .form-section form {
   padding-top: 10px;
-}
-.form-section form div {
-  display: flex;
-  flex-direction: column;
 }
 
 .form-section fieldset {
   border-left: none;
   border-right: none;
   border-radius: 1px;
+  box-sizing: border-box;
+  width: 100%;
+
+  font-size: 24px;
 
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 20px;
+  padding: 30px 10px;
 }
 
+.form-section label {
+  font-size: 22px;
+}
 .form-section input {
-  border: none;
-  border-bottom: 1.5px rgba(18, 8, 54, 0.356) solid;
+  background-color: #f7ecfc;
 
-  padding: 2px;
-  padding-left: 3px;
+  border: none;
+  border-bottom: 1.8px rgba(18, 8, 54, 0.356) solid;
+
+  margin-top: 5px;
+  padding: 7px 0 0 3px;
+
+  font-size: 20px;
+  transition: .4s;
 }
-.form-section input:focus:valid {
-  border-bottom-color:  green;
+.form-section input:focus:valid,
+.form-section input:hover:valid {
+  border-bottom: 2px green solid;
 }
-.form-section input:focus:invalid {
-  border-bottom-color:  rgb(255, 0, 0);
+.form-section input:focus:invalid,
+.form-section input:hover:invalid {
+  border-bottom: 2px red solid;
+}
+.form-section input:hover,
+.form-section input:focus {
+  transform: scale(1.015, 1.08);
 }
 
 .form-section button {
@@ -117,4 +139,24 @@ body {
   background-color: #af85c0;
   transform: scale(1.1);
   font-size: 1.7rem;
+}
+
+.handle {
+  width: 98%;
+  display: flex;
+  gap: 50px;
+  align-self: center;
+}
+.handle div,
+.handle input {
+  width: 100%;
+}
+
+.login {
+  padding-left: 10px;
+  font-size: 19px;
+}
+.login a {
+  text-decoration: none;
+  color: #af85c0;
 }
