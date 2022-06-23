@@ -79,6 +79,7 @@ body {
   border-left: none;
   border-right: none;
   border-radius: 1px;
+border-color: #af85c0;
   box-sizing: border-box;
   width: 100%;
 
@@ -105,17 +106,19 @@ body {
   font-size: 20px;
   transition: .4s;
 }
-.form-section input:focus:valid,
-.form-section input:hover:valid {
+.form-section .notpassword:focus:valid,
+.form-section .notpassword:hover:valid
+{
   border-bottom: 2px green solid;
 }
-.form-section input:focus:invalid,
-.form-section input:hover:invalid {
+.form-section .notpassword:focus:invalid,
+.form-section .notpassword:hover:invalid
+{
   border-bottom: 2px red solid;
 }
 .form-section input:hover,
 .form-section input:focus {
-  transform: scale(1.015, 1.08);
+  transform: scale(1.015, 1.09);
 }
 
 .form-section button {
@@ -159,4 +162,12 @@ body {
 .login a {
   text-decoration: none;
   color: #af85c0;
+}
+
+input.invalid {
+  border-bottom: 2px red solid;
+}
+input.valid {
+  
+  border-bottom: 2px green solid;
 }
