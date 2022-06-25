@@ -133,6 +133,7 @@ border-color: #af85c0;
   border-radius: 6px;
   border: none;
 
+  box-sizing: border-box;
   cursor: pointer;
   transition: .5s;
 }
@@ -140,8 +141,8 @@ border-color: #af85c0;
 .form-section button:hover {
   color: #290836;
   background-color: #af85c0;
-  transform: scale(1.1);
-  font-size: 1.7rem;
+  transform: scale(1.09);
+  font-size: 1.69rem;
 }
 
 .handle {
@@ -155,7 +156,8 @@ border-color: #af85c0;
   width: 100%;
 }
 
-.login {
+.login,
+#validate {
   padding-left: 10px;
   font-size: 19px;
 }
@@ -168,6 +170,12 @@ input.invalid {
   border-bottom: 2px red solid;
 }
 input.valid {
-  
   border-bottom: 2px green solid;
+}
+
+#validate {
+  font-size: 18px;
+  color: #290836;
+  font-weight: bold;
+  padding-bottom: 10px;
 }

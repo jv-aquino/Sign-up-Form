@@ -36,7 +36,7 @@
   <section class="form-section">
     <h2>This is not a real online service! Join our community and take your career in web development to the moon. Sign up <em>now</em> and get started.</h2>
     <h2>You <em>know</em> you want to</h2>
-    <form action="#" spellcheck="false">
+    <form action="#" spellcheck="false" onsubmit="return validateForm()">
       <fieldset>
         <caption>Fill out the form and get started!</caption>
         <div class="handle">
@@ -62,15 +62,16 @@
         <div class="handle">
           <div>
             <label for="password">Password</label><br>
-            <input name="password" id="password" type="password" required>
+            <input name="password" id="password" type="password" minlength="6" required>
           </div>
           <div>
             <label for="confirm-password">Confirm Password</label><br>
-            <input name="confirm-password" id="confirm-password" type="password" required>
+            <input name="confirm-password" id="confirm-password" minlength="6" type="password" required>
           </div>
         </div>
       </fieldset>
       <button id="submit" type="submit">Create Account</button>
+      <p id="validate"></p>
       <p class="login">Already have an account? <a href="#">Log in</a></p>
     </form>
   </section>

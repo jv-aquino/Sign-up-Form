@@ -47,3 +47,18 @@ function updatePassword() {
   confirmPassword = confirmPasswordField.value;
   password = passwordField.value;
 }
+
+function validateForm() {
+  const response = document.querySelector("#validate");
+
+  if (state != 'valid') {
+    response.textContent = "Passwords don't match";
+
+    return false;
+  }
+  else {
+    response.textContent = "";
+    
+    return true;
+  }
+}
